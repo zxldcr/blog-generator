@@ -15,3 +15,20 @@ else
 exit
 fi
 
+#!/usr/bin/env node
+
+var fs = require('fs')
+
+ var dirName = process.argv[1] 
+
+ process.chdir("/c/Users/昕/Desktop") 
+ fs.mkdirSync("./" + dirName) 
+ process.chdir("./" + dirName) 
+ fs.mkdirSync('css') 
+ fs.mkdirSync('js') 
+
+ fs.writeFileSync("./index.html", "")
+ fs.writeFileSync("css/style.css", "")
+ fs.writeFileSync("./js/main.js", "")
+
+ process.exit(0)
