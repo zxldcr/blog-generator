@@ -1,11 +1,11 @@
-#!/usr/bin/env node //代码有问题?路径不能用中文?
+#!/usr/bin/env node //代码有问题?路径能不能用中文?
 
 var fs = require('fs')
 
 var dirName = process.argv[2] // 你传的参数是从第 2 个开始的
 if(dirName){
     console.log('error: dir exists')
-    process.exit(0)
+    process.exit(1)
 }else{
     process.chdir("/C/Users/昕/Desktop") // cd ~/Desktop
     fs.mkdirSync("./" + dirName) // mkdir $1
